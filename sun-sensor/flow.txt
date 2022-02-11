@@ -1,0 +1,13 @@
+
+Youtube link : https://www.youtube.com/watch?v=6an-vDm8re4 
+		1. Address lines are given the values - 3 lines cause 8 devices in total
+		2. ALE - low high low
+		3. SOC - low high low
+		4. Wait for EOC to go low
+		5. Set OE
+		6. Read data from data output lines
+		7. Reset OE
+
+https://embetronicx.com/tutorials/microcontrollers/8051/adc0808-interfacing-with-8051/: 
+		ADC0808 needs an external clock to operate, unlike ADC0804 which has an internal clock.
+
