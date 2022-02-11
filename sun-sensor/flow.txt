@@ -1,13 +1,24 @@
 
 Youtube link : https://www.youtube.com/watch?v=6an-vDm8re4 
 		1. Address lines are given the values - 3 lines cause 8 devices in total
-		2. ALE - low high low
-		3. SOC - low high low
-		4. Wait for EOC to go low
-		5. Set OE
-		6. Read data from data output lines
-		7. Reset OE
+		2. ALE - low high
+		3. SOC - low high // was given in the link below, in the video ALE and SOC go lhl one after the other
+		4. ALE - high low 
+		5. SOC - high low
+		6. Wait for EOC to go low
+		7. Set OE
+		8. Read data from data output lines
+		9. Reset OE
 
-https://embetronicx.com/tutorials/microcontrollers/8051/adc0808-interfacing-with-8051/: 
+https://embetronicx.com/tutorials/microcontrollers/8051/adc0808-interfacing-with-8051/
 		ADC0808 needs an external clock to operate, unlike ADC0804 which has an internal clock.
+
+https://technobyte.org/8051-interfacing-adc-0808-tutorial-steps/
+
+https://www.digikey.in/htmldatasheets/production/3514921/0/0/1/adc0808-09.html?utm_adgroup=Texas%20Instruments&utm_source=google&utm_medium=cpc&utm_campaign=Dynamic%20Search_EN_Suppliers&utm_term=&productid=&gclid=Cj0KCQiAjJOQBhCkARIsAEKMtO3oLD9EdfTZ6W_xhupcXhmMqqIW7Ltn9lW7BbO960HDz3UQpGiHwnkaAnDuEALw_wcB
+	says max frequency for clock is 1280 kHz
+	
+https://visualgdb.com/tutorials/arm/stm32/timers/hal/
+
+
 
