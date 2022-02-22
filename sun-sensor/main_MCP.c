@@ -1,10 +1,10 @@
 #include "stm32f4xx.h"
 
-#define SUN_SENSOR_ADDR 0xD0		//0b11010000		check
+#define SUN_SENSOR_ADDR 	0xD0		//0b11010000		check
 #define CONF_REG_ADDR		0x00		//dont know
-#define CONF_FOR_START 	0x8C		//0b10001100		check
+#define CONF_FOR_START 		0x8C		//0b10001100		check
 #define CONF_FOR_READ		0x00		//dont know
-#define FLAG_CHECK_EOC  0x80		//0b10000000
+#define FLAG_CHECK_EOC  	0x80		//0b10000000
 
 uint8_t Tx_Buffer=0;
 
@@ -30,14 +30,16 @@ int main()
 	
 	HAL_I2C_Init(&hi2c);
 	
+	//sending configuration reg value to start the conversion
 	Tx_Buffer = CONF_FOR_START;
 	while(HAL_I2C_Master_Transmit(&hi2c, SUN_SENSOR_ADDR, &Tx_Buffer, 1u, 3) != HAL_OK){}
 		
+	//waiting until the READY bit in configuration reg is 0		
 	uint8_t check;
 	do
 	{
 		check = Tx_Buffer & FLAG_CHECK_EOC;
-		if(check == FLAG_CHECK_EOC)
+		if(check == 0)
 			break;
 	}while(HAL_I2C_Master_Receive(&hi2c, SUN_SENSOR_ADDR, &Tx_Buffer, 1u, 3) != HAL_OK);
 
