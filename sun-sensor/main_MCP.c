@@ -10,6 +10,7 @@ uint8_t Tx_Buffer=0;
 
 //can use polling mode or interrupt mode
 //use while loop for polling mode
+//
 
 int main()
 {
