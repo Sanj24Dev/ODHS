@@ -4,12 +4,12 @@ ODHS WORK
 ------------documentation
 ------------i2c for adc code
 -------------------------------------------------gyro code
-------------spi for dac code
+------------spi for dac code----testing dac
 -------------------------------------------------code for motor driver
 -------------------------------------------------testing motor driver
 -------------------------------------------------primary peripheral testing
-------------reading os documentation
-----Make a GIT repo
+------------reading OS documentation
+----Make a GIT repo----made
 -------------------------------------------------learn msp
 -------------------------------------------------tert codes to be written
 -------------------------------------------------rs encoding
