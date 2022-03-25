@@ -1,0 +1,47 @@
+
+ODHS WORK
+---------------------------------------------------------
+------------documentation
+------------i2c for adc code
+-------------------------------------------------gyro code
+------------spi for dac code
+-------------------------------------------------code for motor driver
+-------------------------------------------------testing motor driver
+-------------------------------------------------primary peripheral testing
+------------reading os documentation
+----Make a GIT repo
+-------------------------------------------------learn msp
+-------------------------------------------------tert codes to be written
+-------------------------------------------------rs encoding
+
+
+is matlab(embedded coder) feasible for our system	NO
+parallel processing in primary
+
+Documentation work 
+ - MCU
+ - interboard comm design - Prim, sec, tert, i2c
+ - Intra board - periph
+ - RTOS / interrupt based
+
+
+
+motor driver related task
+ - micrcontroller -- SPI -- dac -- motor driver --> ramp pwm
+            ---
+       ---  | |  ---
+  ---  | |  | |  | |  ---
+__| |__| |__| |__| |__| |__      output
+
+primary send torque value tert
+torque to rpm is to be done by the tert
+done in 3 stages:
+1. DAC - voltage levels = 1.65 to 5V
+2. PWM - lowest maybe 2%
+	if duty cycle is 10%, cut off Vcc for 90% of this pulse, you will get 1% duty cycle
+3. Control Vcc of motor driver - shut it off when needed?
+
+
+
+
+
