@@ -1,7 +1,7 @@
 
 ODHS WORK
 ---------------------------------------------------------
-------------documentation
+documentation
 ------------i2c for adc code
 -------------------------------------------------gyro code
 ------------spi for dac code----testing dac
@@ -9,7 +9,7 @@ ODHS WORK
 -------------------------------------------------testing motor driver
 -------------------------------------------------primary peripheral testing
 ------------reading OS documentation
-----Make a GIT repo----made
+Make a GIT repo----made
 -------------------------------------------------learn msp
 -------------------------------------------------tert codes to be written
 -------------------------------------------------rs encoding
