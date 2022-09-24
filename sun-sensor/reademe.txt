@@ -1,0 +1,8 @@
+ADC used is MCP3424
+
+Sun sensor addr               0xD0		//0b11010000
+Config reg addr
+config for start              0x8C		//0b10001100
+config for read
+flag for checking eoc         0x80		//0b10000000
+
