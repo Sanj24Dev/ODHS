@@ -2,7 +2,7 @@
 ODHS WORK
 ---------------------------------------------------------
 documentation
-------------i2c for adc code									juniors
+------------i2c for adc code									
 -------------------------------------------------code for motor driver
 -------------------------------------------------testing motor driver
 -------------------------------------------------primary peripheral testing
@@ -10,3 +10,16 @@ documentation
 -------------------------------------------------learn msp
 -------------------------------------------------tert codes to be written
 -------------------------------------------------rs encoding
+
+
+
+Peripherals in MSP to test
+- LTC
+- ADF
+- Antennae deployment
+- EEPROM
+- DS ?
+- OCPC
+- RTC
+- Watchdog
+- Morse convertor
