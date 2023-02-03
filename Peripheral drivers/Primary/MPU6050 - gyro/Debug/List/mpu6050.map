@@ -1,0 +1,572 @@
+###############################################################################
+#
+# IAR ELF Linker V8.40.1.212/W32 for ARM                  30/Jan/2023  18:06:34
+# Copyright 2007-2019 IAR Systems AB.
+#
+#    Output file  =
+#        D:\Parikshit\Peripheral drivers\Primary\MPU6050 -
+#        gyro\Debug\Exe\mpu6050.out
+#    Map file     =
+#        D:\Parikshit\Peripheral drivers\Primary\MPU6050 -
+#        gyro\Debug\List\mpu6050.map
+#    Command line =
+#        -f C:\Users\Asus\AppData\Local\Temp\EWA403.tmp
+#        ("D:\Parikshit\Peripheral drivers\Primary\MPU6050 -
+#        gyro\Debug\Obj\cpal_hal.o" "D:\Parikshit\Peripheral
+#        drivers\Primary\MPU6050 - gyro\Debug\Obj\cpal_i2c.o"
+#        "D:\Parikshit\Peripheral drivers\Primary\MPU6050 -
+#        gyro\Debug\Obj\cpal_i2c_hal_stm32f4xx.o" "D:\Parikshit\Peripheral
+#        drivers\Primary\MPU6050 - gyro\Debug\Obj\cpal_usercallback.o"
+#        "D:\Parikshit\Peripheral drivers\Primary\MPU6050 -
+#        gyro\Debug\Obj\gyro.o" "D:\Parikshit\Peripheral
+#        drivers\Primary\MPU6050 - gyro\Debug\Obj\main.o"
+#        "D:\Parikshit\Peripheral drivers\Primary\MPU6050 -
+#        gyro\Debug\Obj\misc.o" "D:\Parikshit\Peripheral
+#        drivers\Primary\MPU6050 - gyro\Debug\Obj\startup_stm32f4xx.o"
+#        "D:\Parikshit\Peripheral drivers\Primary\MPU6050 -
+#        gyro\Debug\Obj\stm32_eval_i2c_ee_cpal.o" "D:\Parikshit\Peripheral
+#        drivers\Primary\MPU6050 - gyro\Debug\Obj\stm32f4xx_dma.o"
+#        "D:\Parikshit\Peripheral drivers\Primary\MPU6050 -
+#        gyro\Debug\Obj\stm32f4xx_gpio.o" "D:\Parikshit\Peripheral
+#        drivers\Primary\MPU6050 - gyro\Debug\Obj\stm32f4xx_i2c.o"
+#        "D:\Parikshit\Peripheral drivers\Primary\MPU6050 -
+#        gyro\Debug\Obj\stm32f4xx_rcc.o" "D:\Parikshit\Peripheral
+#        drivers\Primary\MPU6050 - gyro\Debug\Obj\stm32f4xx_tim.o"
+#        "D:\Parikshit\Peripheral drivers\Primary\MPU6050 -
+#        gyro\Debug\Obj\system_stm32f4xx.o" --no_out_extension -o
+#        "D:\Parikshit\Peripheral drivers\Primary\MPU6050 -
+#        gyro\Debug\Exe\mpu6050.out" --redirect _Printf=_PrintfFullNoMb
+#        --redirect _Scanf=_ScanfFullNoMb --map "D:\Parikshit\Peripheral
+#        drivers\Primary\MPU6050 - gyro\Debug\List\mpu6050.map" --config
+#        "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        8.3\arm\config\linker\ST\stm32f407xG.icf" --semihosting --entry
+#        __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because no calls to memory allocation
+functions were found in the application outside of system library
+functions, and there are calls to deallocation functions in the
+application.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x800'0000 { ro section .intvec };
+"P1":  place in [from 0x800'0000 to 0x80f'ffff] { ro };
+define block CSTACK with size = 8K, alignment = 8 { };
+define block HEAP with size = 8K, alignment = 8 { };
+"P4":  place in [from 0x2000'0000 to 0x2001'bfff] |
+                [from 0x2001'c000 to 0x2001'ffff] {
+          rw, block CSTACK, block HEAP };
+initialize by copy { rw };
+
+No sections matched the following patterns:
+
+  ro section application_specific_ro  in "P2"
+  section .backup_sram                in "P5"
+  section .ccram                      in "P3"
+
+
+  Section            Kind         Address    Size  Object
+  -------            ----         -------    ----  ------
+"A0":                                       0x188
+  .intvec            ro code   0x800'0000   0x188  startup_stm32f4xx.o [1]
+                             - 0x800'0188   0x188
+
+"P1":                                      0x345c
+  .text              ro code   0x800'0188  0x185c  cpal_i2c.o [1]
+  .text              ro code   0x800'19e4   0x55c  cpal_i2c_hal_stm32f4xx.o [1]
+  .text              ro code   0x800'1f40    0xf0  stm32f4xx_i2c.o [1]
+  .text              ro code   0x800'2030     0x4  cpal_usercallback.o [1]
+  .text              ro code   0x800'2034   0x12c  stm32f4xx_rcc.o [1]
+  .text              ro code   0x800'2160    0xfc  stm32f4xx_gpio.o [1]
+  .text              ro code   0x800'225c   0x1f4  stm32f4xx_dma.o [1]
+  .text              ro code   0x800'2450     0xc  cpal_hal.o [1]
+  .text              ro code   0x800'245c    0x80  misc.o [1]
+  .text              ro code   0x800'24dc   0x668  gyro.o [1]
+  .text              ro code   0x800'2b44    0x24  S32ToFlt.o [3]
+  .text              ro code   0x800'2b68    0x48  FltToDbl.o [3]
+  .text              ro code   0x800'2bb0   0x246  DblDiv.o [3]
+  .text              ro code   0x800'2df6    0x3a  zero_init3.o [4]
+  .text              ro code   0x800'2e30    0x22  S32ToDbl.o [3]
+  .text              ro code   0x800'2e52    0x2e  copy_init3.o [4]
+  .text              ro code   0x800'2e80   0x17a  DblAdd.o [3]
+  .text              ro code   0x800'2ffc    0xd2  DblSub.o [3]
+  .text              ro code   0x800'30d0   0x114  system_stm32f4xx.o [1]
+  .text              ro code   0x800'31e4    0x30  main.o [1]
+  .text              ro code   0x800'3214    0x28  data_init.o [4]
+  .iar.init_table    const     0x800'323c    0x24  - Linker created -
+  .text              ro code   0x800'3260    0x1e  cmain.o [4]
+  .text              ro code   0x800'327e     0x4  low_level_init.o [2]
+  .text              ro code   0x800'3282     0x4  exit.o [2]
+  .text              ro code   0x800'3288     0xa  cexit.o [4]
+  .text              ro code   0x800'3294    0x14  exit.o [5]
+  .text              ro code   0x800'32a8    0x10  startup_stm32f4xx.o [1]
+  .rodata            const     0x800'32b8     0xc  cpal_i2c_hal_stm32f4xx.o [1]
+  .rodata            const     0x800'32c4     0xc  cpal_i2c_hal_stm32f4xx.o [1]
+  .rodata            const     0x800'32d0     0xc  cpal_i2c_hal_stm32f4xx.o [1]
+  .rodata            const     0x800'32dc     0xc  cpal_i2c_hal_stm32f4xx.o [1]
+  .rodata            const     0x800'32e8     0xc  cpal_i2c_hal_stm32f4xx.o [1]
+  .rodata            const     0x800'32f4     0xc  cpal_i2c_hal_stm32f4xx.o [1]
+  .rodata            const     0x800'3300     0xc  cpal_i2c_hal_stm32f4xx.o [1]
+  .rodata            const     0x800'330c     0xc  cpal_i2c_hal_stm32f4xx.o [1]
+  .rodata            const     0x800'3318     0xc  cpal_i2c_hal_stm32f4xx.o [1]
+  .rodata            const     0x800'3324     0xc  cpal_i2c_hal_stm32f4xx.o [1]
+  .rodata            const     0x800'3330     0xc  cpal_i2c_hal_stm32f4xx.o [1]
+  .rodata            const     0x800'333c     0xc  cpal_i2c_hal_stm32f4xx.o [1]
+  .rodata            const     0x800'3348     0xc  cpal_i2c_hal_stm32f4xx.o [1]
+  .text              ro code   0x800'3354     0xc  cstartup_M.o [4]
+  .rodata            const     0x800'3360     0x8  cpal_i2c_hal_stm32f4xx.o [1]
+  .rodata            const     0x800'3368     0x8  cpal_i2c_hal_stm32f4xx.o [1]
+  .rodata            const     0x800'3370     0x8  cpal_i2c_hal_stm32f4xx.o [1]
+  .rodata            const     0x800'3378     0x8  cpal_i2c_hal_stm32f4xx.o [1]
+  .rodata            const     0x800'3380     0x4  cpal_i2c_hal_stm32f4xx.o [1]
+  .rodata            const     0x800'3384     0x4  cpal_i2c_hal_stm32f4xx.o [1]
+  .rodata            const     0x800'3388     0x4  cpal_i2c_hal_stm32f4xx.o [1]
+  .rodata            const     0x800'338c     0x4  cpal_i2c_hal_stm32f4xx.o [1]
+  .rodata            const     0x800'3390     0x4  cpal_i2c_hal_stm32f4xx.o [1]
+  .rodata            const     0x800'3394     0x4  cpal_i2c_hal_stm32f4xx.o [1]
+  .rodata            const     0x800'3398     0x4  cpal_i2c_hal_stm32f4xx.o [1]
+  .rodata            const     0x800'339c     0x4  cpal_i2c_hal_stm32f4xx.o [1]
+  .rodata            const     0x800'33a0     0x4  cpal_i2c_hal_stm32f4xx.o [1]
+  .rodata            const     0x800'33a4     0x4  cpal_i2c_hal_stm32f4xx.o [1]
+  .rodata            const     0x800'33a8     0x4  cpal_i2c_hal_stm32f4xx.o [1]
+  .rodata            const     0x800'33ac     0x4  cpal_i2c_hal_stm32f4xx.o [1]
+  .text              ro code   0x800'33b0     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'33b4     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'33b8     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'33bc     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'33c0     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'33c4     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'33c8     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'33cc     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'33d0     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'33d4     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'33d8     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'33dc     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'33e0     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'33e4     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'33e8     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'33ec     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'33f0     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'33f4     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'33f8     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'33fc     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'3400     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'3404     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'3408     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'340c     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'3410     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'3414     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'3418     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'341c     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'3420     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'3424     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'3428     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'342c     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'3430     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'3434     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'3438     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'343c     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'3440     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'3444     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'3448     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'344c     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'3450     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'3454     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'3458     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'345c     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'3460     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'3464     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'3468     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'346c     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'3470     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'3474     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'3478     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'347c     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'3480     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'3484     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'3488     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'348c     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'3490     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'3494     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'3498     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'349c     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'34a0     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'34a4     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'34a8     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'34ac     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'34b0     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'34b4     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'34b8     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'34bc     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'34c0     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'34c4     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'34c8     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'34cc     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'34d0     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'34d4     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'34d8     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'34dc     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'34e0     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'34e4     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'34e8     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'34ec     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'34f0     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'34f4     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'34f8     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'34fc     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'3500     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'3504     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'3508     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'350c     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'3510     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'3514     0x4  startup_stm32f4xx.o [1]
+  .text              ro code   0x800'3518     0x4  startup_stm32f4xx.o [1]
+  .rodata            const     0x800'351c     0x0  zero_init3.o [4]
+  .rodata            const     0x800'351c     0x0  copy_init3.o [4]
+  Initializer bytes  const     0x800'351c    0xc8  <for P4 s0>
+                             - 0x800'35e4  0x345c
+
+"P4", part 1 of 3:                           0xc8
+  P4 s0                       0x2000'0000    0xc8  <Init block>
+    .data            inited   0x2000'0000    0x20  cpal_i2c_hal_stm32f4xx.o [1]
+    .data            inited   0x2000'0020    0x20  cpal_i2c_hal_stm32f4xx.o [1]
+    .data            inited   0x2000'0040    0x20  cpal_i2c_hal_stm32f4xx.o [1]
+    .data            inited   0x2000'0060    0x10  stm32f4xx_rcc.o [1]
+    .data            inited   0x2000'0070     0xc  cpal_i2c_hal_stm32f4xx.o [1]
+    .data            inited   0x2000'007c     0xc  cpal_i2c_hal_stm32f4xx.o [1]
+    .data            inited   0x2000'0088     0xc  cpal_i2c_hal_stm32f4xx.o [1]
+    .data            inited   0x2000'0094     0xc  cpal_i2c_hal_stm32f4xx.o [1]
+    .data            inited   0x2000'00a0     0xc  cpal_i2c_hal_stm32f4xx.o [1]
+    .data            inited   0x2000'00ac     0xc  cpal_i2c_hal_stm32f4xx.o [1]
+    .data            inited   0x2000'00b8     0xc  cpal_i2c_hal_stm32f4xx.o [1]
+    .data            inited   0x2000'00c4     0x4  system_stm32f4xx.o [1]
+                            - 0x2000'00c8    0xc8
+
+"P4", part 2 of 3:                          0x1b8
+  .bss               zero     0x2000'00c8   0x100  gyro.o [1]
+  .bss               zero     0x2000'01c8    0x3c  cpal_i2c_hal_stm32f4xx.o [1]
+  .bss               zero     0x2000'0204     0x2  gyro.o [1]
+  .bss               zero     0x2000'0206     0x2  gyro.o [1]
+  .bss               zero     0x2000'0208    0x38  main.o [1]
+  .bss               zero     0x2000'0240    0x10  gyro.o [1]
+  .bss               zero     0x2000'0250    0x10  gyro.o [1]
+  .bss               zero     0x2000'0260    0x10  gyro.o [1]
+  .bss               zero     0x2000'0270     0x2  gyro.o [1]
+  .bss               zero     0x2000'0272     0x2  gyro.o [1]
+  .bss               zero     0x2000'0274     0x2  gyro.o [1]
+  .bss               zero     0x2000'0276     0x2  gyro.o [1]
+  .bss               zero     0x2000'0278     0x2  gyro.o [1]
+  .bss               zero     0x2000'027a     0x1  gyro.o [1]
+  .bss               zero     0x2000'027b     0x1  gyro.o [1]
+  .bss               zero     0x2000'027c     0x1  gyro.o [1]
+  .bss               zero     0x2000'027d     0x1  gyro.o [1]
+  .bss               zero     0x2000'027e     0x1  main.o [1]
+                            - 0x2000'027f   0x1b7
+
+"P4", part 3 of 3:                         0x2000
+  CSTACK                      0x2000'0280  0x2000  <Block>
+    CSTACK           uninit   0x2000'0280  0x2000  <Block tail>
+                            - 0x2000'2280  0x2000
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+   0x800'35e4   0x80f'ffff  0xf'ca1c
+  0x2000'2280  0x2001'bfff  0x1'9d80
+  0x2001'c000  0x2001'ffff    0x4000
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x1b7:
+          0x2000'00c8  0x1b7
+
+Copy (__iar_copy_init3)
+    1 source range, total size 0xc8:
+           0x800'351c   0xc8
+    1 destination range, total size 0xc8:
+          0x2000'0000   0xc8
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                    ro code  ro data  rw data
+    ------                    -------  -------  -------
+command line/config:
+    ---------------------------------------------------
+    Total:
+
+D:\Parikshit\Peripheral drivers\Primary\MPU6050 - gyro\Debug\Obj: [1]
+    cpal_hal.o                     12
+    cpal_i2c.o                  6'236
+    cpal_i2c_hal_stm32f4xx.o    1'372      416      240
+    cpal_usercallback.o             4
+    gyro.o                      1'640               322
+    main.o                         48                57
+    misc.o                        128
+    startup_stm32f4xx.o           772
+    stm32f4xx_dma.o               500
+    stm32f4xx_gpio.o              252
+    stm32f4xx_i2c.o               240
+    stm32f4xx_rcc.o               300       16       16
+    system_stm32f4xx.o            276        4        4
+    ---------------------------------------------------
+    Total:                     11'780      436      639
+
+dl7M_tln.a: [2]
+    exit.o                          4
+    low_level_init.o                4
+    ---------------------------------------------------
+    Total:                          8
+
+m7M_tl.a: [3]
+    DblAdd.o                      378
+    DblDiv.o                      582
+    DblSub.o                      210
+    FltToDbl.o                     72
+    S32ToDbl.o                     34
+    S32ToFlt.o                     36
+    ---------------------------------------------------
+    Total:                      1'312
+
+rt7M_tl.a: [4]
+    cexit.o                        10
+    cmain.o                        30
+    copy_init3.o                   46
+    cstartup_M.o                   12
+    data_init.o                    40
+    zero_init3.o                   58
+    ---------------------------------------------------
+    Total:                        196
+
+shb_l.a: [5]
+    exit.o                         20
+    ---------------------------------------------------
+    Total:                         20
+
+    Gaps                            8
+    Linker created                          36    8'192
+-------------------------------------------------------
+    Grand Total:               13'324      472    8'831
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address   Size  Type      Object
+-----                       -------   ----  ----      ------
+.iar.init_table$$Base    0x800'323c          --   Gb  - Linker created -
+.iar.init_table$$Limit   0x800'3260          --   Gb  - Linker created -
+?main                    0x800'3261         Code  Gb  cmain.o [4]
+APBAHBPrescTable        0x2000'0060   0x10  Data  Lc  stm32f4xx_rcc.o [1]
+BSP_Gyroscope_GetValues
+                         0x800'258b  0x55a  Code  Gb  gyro.o [1]
+BSP_Gyroscope_Init       0x800'24dd   0x88  Code  Gb  gyro.o [1]
+BSP_Gyroscope_Read_Register
+                         0x800'2565   0x26  Code  Gb  gyro.o [1]
+CPAL_DMA_InitStructure  0x2000'01c8   0x3c  Data  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+CPAL_HAL_NVICInit        0x800'2451    0xc  Code  Gb  cpal_hal.o [1]
+CPAL_I2C_AF              0x800'32d0    0xc  Data  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+CPAL_I2C_CLK             0x800'32b8    0xc  Data  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+CPAL_I2C_DEVICE         0x2000'007c    0xc  Data  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+CPAL_I2C_DMA            0x2000'00b8    0xc  Data  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+CPAL_I2C_DMA_CHANNEL     0x800'3300    0xc  Data  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+CPAL_I2C_DMA_CLK         0x800'32f4    0xc  Data  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+CPAL_I2C_DMA_RX_HT_FLAG
+                         0x800'333c    0xc  Data  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+CPAL_I2C_DMA_RX_IRQHandler
+                         0x800'0c59  0x25a  Code  Gb  cpal_i2c.o [1]
+CPAL_I2C_DMA_RX_IRQn     0x800'3384    0x4  Data  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+CPAL_I2C_DMA_RX_Stream  0x2000'00ac    0xc  Data  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+CPAL_I2C_DMA_RX_TC_FLAG
+                         0x800'3330    0xc  Data  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+CPAL_I2C_DMA_RX_TE_FLAG
+                         0x800'3348    0xc  Data  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+CPAL_I2C_DMA_TX_HT_FLAG
+                         0x800'3318    0xc  Data  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+CPAL_I2C_DMA_TX_IRQHandler
+                         0x800'09a9  0x2a4  Code  Gb  cpal_i2c.o [1]
+CPAL_I2C_DMA_TX_IRQn     0x800'3380    0x4  Data  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+CPAL_I2C_DMA_TX_Stream  0x2000'00a0    0xc  Data  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+CPAL_I2C_DMA_TX_TC_FLAG
+                         0x800'330c    0xc  Data  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+CPAL_I2C_DMA_TX_TE_FLAG
+                         0x800'3324    0xc  Data  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+CPAL_I2C_DR              0x800'32c4    0xc  Data  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+CPAL_I2C_ER_IRQHandler   0x800'0869  0x12e  Code  Gb  cpal_i2c.o [1]
+CPAL_I2C_EV_IRQHandler   0x800'07b3   0xb6  Code  Gb  cpal_i2c.o [1]
+CPAL_I2C_Enable_DMA_IT   0x800'18dd   0xee  Code  Gb  cpal_i2c.o [1]
+CPAL_I2C_HAL_CLKDeInit   0x800'1a17   0x32  Code  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+CPAL_I2C_HAL_CLKInit     0x800'19e5   0x32  Code  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+CPAL_I2C_HAL_DMADeInit   0x800'1c91   0x2a  Code  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+CPAL_I2C_HAL_DMAInit     0x800'1b5d   0xa0  Code  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+CPAL_I2C_HAL_DMARXConfig
+                         0x800'1c49   0x48  Code  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+CPAL_I2C_HAL_DMATXConfig
+                         0x800'1bfd   0x4c  Code  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+CPAL_I2C_HAL_GPIODeInit
+                         0x800'1b0d   0x50  Code  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+CPAL_I2C_HAL_GPIOInit    0x800'1a49   0xc4  Code  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+CPAL_I2C_HAL_ITInit      0x800'1cbb  0x184  Code  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+CPAL_I2C_IT_ERR_IRQn     0x800'338c    0x4  Data  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+CPAL_I2C_IT_EVT_IRQn     0x800'3388    0x4  Data  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+CPAL_I2C_Init            0x800'01e7  0x13c  Code  Gb  cpal_i2c.o [1]
+CPAL_I2C_Read            0x800'0419  0x39a  Code  Gb  cpal_i2c.o [1]
+CPAL_I2C_SCL_GPIO_CLK    0x800'32dc    0xc  Data  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+CPAL_I2C_SCL_GPIO_PIN    0x800'3360    0x8  Data  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+CPAL_I2C_SCL_GPIO_PINSOURCE
+                         0x800'3368    0x8  Data  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+CPAL_I2C_SCL_GPIO_PORT  0x2000'0088    0xc  Data  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+CPAL_I2C_SDA_GPIO_CLK    0x800'32e8    0xc  Data  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+CPAL_I2C_SDA_GPIO_PIN    0x800'3370    0x8  Data  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+CPAL_I2C_SDA_GPIO_PINSOURCE
+                         0x800'3378    0x8  Data  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+CPAL_I2C_SDA_GPIO_PORT  0x2000'0094    0xc  Data  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+CPAL_I2C_Timeout         0x800'0f21   0x16  Code  Lc  cpal_i2c.o [1]
+CPAL_I2C_Write           0x800'0323   0xf6  Code  Gb  cpal_i2c.o [1]
+CPAL_TIMEOUT_UserCallback
+                         0x800'2031    0x4  Code  Gb  cpal_usercallback.o [1]
+CSTACK$$Base            0x2000'0280          --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'2280          --   Gb  - Linker created -
+DMA1_Stream0_IRQHandler
+                         0x800'1e5f    0xa  Code  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+DMA1_Stream2_IRQHandler
+                         0x800'1eb3    0xa  Code  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+DMA1_Stream3_IRQHandler
+                         0x800'1e89    0xa  Code  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+DMA1_Stream4_IRQHandler
+                         0x800'1ea9    0xa  Code  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+DMA1_Stream6_IRQHandler
+                         0x800'1e55    0xa  Code  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+DMA1_Stream7_IRQHandler
+                         0x800'1e7f    0xa  Code  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+DMA_DeInit               0x800'225d  0x140  Code  Gb  stm32f4xx_dma.o [1]
+DMA_Init                 0x800'239d   0x54  Code  Gb  stm32f4xx_dma.o [1]
+GPIO_Init                0x800'2161   0xa8  Code  Gb  stm32f4xx_gpio.o [1]
+GPIO_PinAFConfig         0x800'2209   0x54  Code  Gb  stm32f4xx_gpio.o [1]
+I2C1_DevStructure       0x2000'0000   0x20  Data  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+I2C1_ER_IRQHandler       0x800'1e49    0xc  Code  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+I2C1_EV_IRQHandler       0x800'1e3f    0xa  Code  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+I2C2_DevStructure       0x2000'0020   0x20  Data  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+I2C2_ER_IRQHandler       0x800'1e73    0xc  Code  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+I2C2_EV_IRQHandler       0x800'1e69    0xa  Code  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+I2C3_DevStructure       0x2000'0040   0x20  Data  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+I2C3_ER_IRQHandler       0x800'1e9d    0xc  Code  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+I2C3_EV_IRQHandler       0x800'1e93    0xa  Code  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+I2C_DevStructures       0x2000'0070    0xc  Data  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+I2C_IT_DMARX_PREPRIO     0x800'33a8    0x4  Data  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+I2C_IT_DMARX_SUBPRIO     0x800'33ac    0x4  Data  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+I2C_IT_DMATX_PREPRIO     0x800'33a0    0x4  Data  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+I2C_IT_DMATX_SUBPRIO     0x800'33a4    0x4  Data  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+I2C_IT_ERR_PREPRIO       0x800'3398    0x4  Data  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+I2C_IT_ERR_SUBPRIO       0x800'339c    0x4  Data  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+I2C_IT_EVT_PREPRIO       0x800'3390    0x4  Data  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+I2C_IT_EVT_SUBPRIO       0x800'3394    0x4  Data  Gb  cpal_i2c_hal_stm32f4xx.o [1]
+I2C_Init                 0x800'1f41   0xc2  Code  Gb  stm32f4xx_i2c.o [1]
+I2C_MASTER_ADD10_Handle
+                         0x800'1271   0x40  Code  Lc  cpal_i2c.o [1]
+I2C_MASTER_ADDR_Handle   0x800'0fdb  0x296  Code  Lc  cpal_i2c.o [1]
+I2C_MASTER_RXNE_Handle   0x800'13c9  0x2f2  Code  Lc  cpal_i2c.o [1]
+I2C_MASTER_START_Handle
+                         0x800'0f37   0xa4  Code  Lc  cpal_i2c.o [1]
+I2C_MASTER_TXE_Handle    0x800'12b1  0x112  Code  Lc  cpal_i2c.o [1]
+I2C_SLAVE_ADDR_Handle    0x800'16c1   0x38  Code  Lc  cpal_i2c.o [1]
+I2C_SLAVE_RXNE_Handle    0x800'1859   0x7a  Code  Lc  cpal_i2c.o [1]
+I2C_SLAVE_STOP_Handle    0x800'16fd  0x112  Code  Lc  cpal_i2c.o [1]
+I2C_SLAVE_TXE_Handle     0x800'1815   0x40  Code  Lc  cpal_i2c.o [1]
+I2C_StructInit           0x800'2011   0x20  Code  Gb  stm32f4xx_i2c.o [1]
+NVIC_Init                0x800'2467   0x62  Code  Gb  misc.o [1]
+NVIC_PriorityGroupConfig
+                         0x800'245d    0xa  Code  Gb  misc.o [1]
+NVIC_SetPriority         0x800'0189   0x28  Code  Lc  cpal_i2c.o [1]
+RCC_AHB1PeriphClockCmd   0x800'20ed   0x1c  Code  Gb  stm32f4xx_rcc.o [1]
+RCC_APB1PeriphClockCmd   0x800'2109   0x1c  Code  Gb  stm32f4xx_rcc.o [1]
+RCC_APB1PeriphResetCmd   0x800'2125   0x1c  Code  Gb  stm32f4xx_rcc.o [1]
+RCC_GetClocksFreq        0x800'2035   0xb8  Code  Gb  stm32f4xx_rcc.o [1]
+Region$$Table$$Base      0x800'323c          --   Gb  - Linker created -
+Region$$Table$$Limit     0x800'3260          --   Gb  - Linker created -
+RxBuffer                0x2000'027a    0x1  Data  Gb  gyro.o [1]
+Rx_Struct               0x2000'0250   0x10  Data  Gb  gyro.o [1]
+SetSysClock              0x800'310d   0xaa  Code  Lc  system_stm32f4xx.o [1]
+SysTick_Config           0x800'01b1   0x36  Code  Lc  cpal_i2c.o [1]
+SysTick_Handler          0x800'0eb3   0x6e  Code  Gb  cpal_i2c.o [1]
+SystemCoreClock         0x2000'00c4    0x4  Data  Gb  system_stm32f4xx.o [1]
+SystemInit               0x800'30d1   0x3c  Code  Gb  system_stm32f4xx.o [1]
+TxBuffer                0x2000'027b    0x1  Data  Gb  gyro.o [1]
+Tx_Struct               0x2000'0260   0x10  Data  Gb  gyro.o [1]
+__aeabi_dadd             0x800'2e81         Code  Gb  DblAdd.o [3]
+__aeabi_ddiv             0x800'2bb1         Code  Gb  DblDiv.o [3]
+__aeabi_f2d              0x800'2b69         Code  Gb  FltToDbl.o [3]
+__aeabi_i2d              0x800'2e31         Code  Gb  S32ToDbl.o [3]
+__aeabi_i2f              0x800'2b45         Code  Gb  S32ToFlt.o [3]
+__cmain                  0x800'3261         Code  Gb  cmain.o [4]
+__exit                   0x800'3295   0x14  Code  Gb  exit.o [5]
+__iar_copy_init3         0x800'2e53   0x2e  Code  Gb  copy_init3.o [4]
+__iar_dadd               0x800'2ffd         Code  Gb  DblSub.o [3]
+__iar_data_init3         0x800'3215   0x28  Code  Gb  data_init.o [4]
+__iar_dsub               0x800'2e91         Code  Gb  DblAdd.o [3]
+__iar_dsubStart          0x800'2ea3         Code  Gb  DblAdd.o [3]
+__iar_program_start      0x800'3355         Code  Gb  cstartup_M.o [4]
+__iar_zero_init3         0x800'2df7   0x3a  Code  Gb  zero_init3.o [4]
+__low_level_init         0x800'327f    0x4  Code  Gb  low_level_init.o [2]
+__vector_table           0x800'0000         Data  Gb  startup_stm32f4xx.o [1]
+_call_main               0x800'326d         Code  Gb  cmain.o [4]
+_exit                    0x800'3289         Code  Gb  cexit.o [4]
+_main                    0x800'327b         Code  Gb  cmain.o [4]
+acc_x                   0x2000'0204    0x2  Data  Gb  gyro.o [1]
+acc_y                   0x2000'0206    0x2  Data  Gb  gyro.o [1]
+acc_z                   0x2000'0270    0x2  Data  Gb  gyro.o [1]
+addr                    0x2000'027c    0x1  Data  Gb  gyro.o [1]
+buff                    0x2000'027e    0x1  Data  Gb  main.o [1]
+exit                     0x800'3283    0x4  Code  Gb  exit.o [2]
+gyr_x                   0x2000'0272    0x2  Data  Gb  gyro.o [1]
+gyr_y                   0x2000'0274    0x2  Data  Gb  gyro.o [1]
+gyr_z                   0x2000'0276    0x2  Data  Gb  gyro.o [1]
+gyroStruct              0x2000'0208   0x38  Data  Gb  main.o [1]
+main                     0x800'31e5   0x30  Code  Gb  main.o [1]
+pCPAL_I2C_Struct        0x2000'0240   0x10  Data  Gb  gyro.o [1]
+ready                   0x2000'027d    0x1  Data  Gb  gyro.o [1]
+rec                     0x2000'00c8  0x100  Data  Gb  gyro.o [1]
+temp                    0x2000'0278    0x2  Data  Gb  gyro.o [1]
+
+
+[1] = D:\Parikshit\Peripheral drivers\Primary\MPU6050 - gyro\Debug\Obj
+[2] = dl7M_tln.a
+[3] = m7M_tl.a
+[4] = rt7M_tl.a
+[5] = shb_l.a
+
+  13'324 bytes of readonly  code memory
+     472 bytes of readonly  data memory
+   8'831 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

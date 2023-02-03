@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <fileVersion>4</fileVersion>
+    <fileChecksum>2680900272</fileChecksum>
+    <configuration>
+        <name>Debug</name>
+        <outputs>
+            <file>$PROJ_DIR$\..\..\library\CPAL lib\src\basic\stm32_eval_i2c_ee_cpal.c</file>
+            <file>$PROJ_DIR$\..\..\library\CPAL lib\src\stm32f4xx_rcc.c</file>
+            <file>$PROJ_DIR$\main.c</file>
+            <file>$PROJ_DIR$\..\..\library\CPAL lib\src\stm32f4xx_i2c.c</file>
+            <file>$PROJ_DIR$\..\..\library\CPAL lib\src\basic\cpal_usercallback.c</file>
+            <file>$PROJ_DIR$\..\..\library\CPAL lib\inc\stm32f4xx_exti.h</file>
+            <file>$PROJ_DIR$\gyro.c</file>
+            <file>$PROJ_DIR$\..\..\library\CPAL lib\inc\stm32f4xx_syscfg.h</file>
+            <file>$PROJ_DIR$\..\..\library\CPAL lib\src\stm32f4xx_gpio.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\cpal_i2c.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\BSP_Gyroscope.xcl</file>
+            <file>$PROJ_DIR$\..\..\library\CPAL lib\inc\stm32f4xx_i2c.h</file>
+            <file>$PROJ_DIR$\..\..\library\CPAL lib\src\basic\cpal_i2c.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\library\CPAL lib\src\basic\cpal_hal.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\cpal_i2c_hal_stm32f4xx.xcl</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+            <file>$PROJ_DIR$\..\..\library\CPAL lib\inc\stm32_eval_i2c_ee_cpal.h</file>
+            <file>$TOOLKIT_DIR$\lib\dl7M_tln.a</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\iccarm_builtin.h</file>
+            <file>$PROJ_DIR$\..\..\..\QM Works\QM Works\F2_source_files_29-09-2019\cpal.h</file>
+            <file>$PROJ_DIR$\..\..\library\CPAL lib\src\basic\system_stm32f4xx.c</file>
+            <file>$PROJ_DIR$\..\..\library\CPAL lib\src\stm32f4xx_tim.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm32f4xx_dma.o</file>
+            <file>$PROJ_DIR$\..\..\library\CPAL lib\inc\cpal.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\cpal_hal.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\system_stm32f4xx.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm32f4xx_gpio.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\cpal_usercallback.xcl</file>
+            <file>$PROJ_DIR$\..\..\library\CPAL lib\inc\cpal_conf.h</file>
+            <file>$PROJ_DIR$\..\..\library\CPAL lib\src\stm32f4xx_dma.c</file>
+            <file>$PROJ_DIR$\..\..\library\CPAL lib\src\basic\cpal_i2c_hal_stm32f4xx.c</file>
+            <file>$PROJ_DIR$\..\..\library\CPAL lib\src\misc.c</file>
+            <file>$PROJ_DIR$\..\..\library\CPAL lib\src\basic\startup_stm32f4xx.s</file>
+            <file>$PROJ_DIR$\..\..\library\CPAL lib\inc\misc.h</file>
+            <file>$PROJ_DIR$\..\..\library\CPAL lib\inc\stm32f4xx_gpio.h</file>
+            <file>$PROJ_DIR$\..\..\library\CPAL lib\inc\stm32f4xx_iwdg.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm32_eval_i2c_ee_cpal.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\misc.xcl</file>
+            <file>$TOOLKIT_DIR$\inc\c\cmsis_iar.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+            <file>$PROJ_DIR$\..\..\library\CPAL lib\inc\stm32f4xx_spi.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\system_stm32f4xx.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\cpal_i2c.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\library\CPAL lib\inc\stm32f4xx_sdio.h</file>
+            <file>$PROJ_DIR$\..\..\library\CPAL lib\inc\stm32f4xx_tim.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\cpal_hal.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\library\CPAL lib\inc\stm32f4xx_adc.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm32f4xx_rcc.xcl</file>
+            <file>$PROJ_DIR$\..\..\..\QM Works\QM Works\F2_source_files_29-09-2019\BSP_Gyroscope.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\BSP_Gyroscope.o</file>
+            <file>$PROJ_DIR$\..\..\library\CPAL lib\inc\stm32f4xx_hash.h</file>
+            <file>$PROJ_DIR$\..\..\library\CPAL lib\inc\stm32f4xx_conf.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\misc.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\gyro.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\cpal_i2c_hal_stm32f4xx.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_float_setup.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_stdlib.h</file>
+            <file>$PROJ_DIR$\Debug\Exe\mpu6050.out</file>
+            <file>$PROJ_DIR$\..\..\library\CPAL lib\inc\stm32f4xx.h</file>
+            <file>$PROJ_DIR$\..\..\library\CPAL lib\inc\cpal_i2c_hal_stm32f4xx.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\cpal_usercallback.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\gyro.o</file>
+            <file>$TOOLKIT_DIR$\config\linker\ST\stm32f407xG.icf</file>
+            <file>$PROJ_DIR$\..\..\library\CPAL lib\inc\stm32f4xx_fsmc.h</file>
+            <file>$PROJ_DIR$\..\..\library\CPAL lib\inc\stm32f4xx_rcc.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\mpu6050.pbd</file>
+            <file>$PROJ_DIR$\BSP_Gyroscope.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\cpal_hal.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\misc.o</file>
+            <file>$PROJ_DIR$\..\..\..\QM Works\QM Works\F2_source_files_29-09-2019\BSP_Gyroscope.c</file>
+            <file>$PROJ_DIR$\..\..\library\CPAL lib\inc\stm32f4xx_rng.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+            <file>$PROJ_DIR$\..\..\library\CPAL lib\inc\stm32f4xx_cryp.h</file>
+            <file>$PROJ_DIR$\..\..\library\CPAL lib\inc\stm32f4xx_wwdg.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\cpal_usercallback.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
+            <file>$PROJ_DIR$\..\..\library\CPAL lib\inc\stm32f4xx_usart.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.xcl</file>
+            <file>$TOOLKIT_DIR$\inc\c\math.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm32f4xx_i2c.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm32_eval_i2c_ee_cpal.xcl</file>
+            <file>$PROJ_DIR$\Debug\List\mpu6050.map</file>
+            <file>$PROJ_DIR$\..\..\library\CPAL lib\inc\system_stm32f4xx.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\cpal_i2c_hal_stm32f4xx.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm32_eval_i2c_ee_cpal.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\cpal_i2c.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm32f4xx_tim.xcl</file>
+            <file>$PROJ_DIR$\gyro.h</file>
+            <file>$PROJ_DIR$\..\..\library\CPAL lib\inc\stm32f4xx_crc.h</file>
+            <file>$PROJ_DIR$\..\..\library\CPAL lib\inc\stm32f4xx_can.h</file>
+            <file>$PROJ_DIR$\..\..\library\CPAL lib\inc\cpal_i2c.h</file>
+            <file>$TOOLKIT_DIR$\lib\m7M_tl.a</file>
+            <file>$PROJ_DIR$\..\..\..\QM Works\QM Works\F2_source_files_29-09-2019\cpal_i2c.h</file>
+            <file>$PROJ_DIR$\..\..\..\QM Works\QM Works\F2_source_files_29-09-2019\cpal_conf_template.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm32f4xx_rcc.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\library\CPAL lib\inc\stm32f4xx_rtc.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\system_stm32f4xx.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\library\CPAL lib\inc\core_cmInstr.h</file>
+            <file>$PROJ_DIR$\..\..\library\CPAL lib\inc\stm32f4xx_flash.h</file>
+            <file>$PROJ_DIR$\..\..\library\CPAL lib\inc\core_cm4.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm32f4xx_gpio.o</file>
+            <file>$PROJ_DIR$\..\..\library\CPAL lib\inc\stm32f4xx_dcmi.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm32f4xx_i2c.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm32f4xx_rcc.o</file>
+            <file>$PROJ_DIR$\..\..\library\CPAL lib\inc\stm32f4xx_pwr.h</file>
+            <file>$PROJ_DIR$\..\..\library\CPAL lib\inc\stm32f4xx_dbgmcu.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm32f4xx_i2c.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\library\CPAL lib\inc\stm32f4xx_dma.h</file>
+            <file>$PROJ_DIR$\..\..\library\CPAL lib\inc\stm32f4xx_dac.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm32f4xx_tim.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm32f4xx_tim.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm32f4xx_gpio.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm32f4xx_dma.xcl</file>
+            <file>$PROJ_DIR$\..\..\library\CPAL lib\inc\core_cmFunc.h</file>
+            <file>$PROJ_DIR$\..\..\library\CPAL lib\inc\core_cm4_simd.h</file>
+            <file>$PROJ_DIR$\BSP_Gyroscope.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\startup_stm32f4xx.o</file>
+            <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
+        </outputs>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 60 84</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\library\CPAL lib\src\basic\stm32_eval_i2c_ee_cpal.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 87</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 83</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 38</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 17 93 62 61 102 16 110 103 19 39 74 100 41 20 120 121 85 54 49 92 91 75 114 109 105 113 5 101 66 53 36 11 37 108 67 73 98 46 43 7 47 79 76 35 25 30</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\library\CPAL lib\src\stm32f4xx_rcc.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 107</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 50</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 97</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 67 61 102 16 110 103 19 39 74 100 41 20 120 121 85 54 49 92 91 75 114 109 105 113 5 101 66 53 36 11 37 108 73 98 46 43 7 47 79 76 35</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\main.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 111</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 80</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 13</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 61 102 16 110 103 19 39 74 100 41 20 120 121 85 54 49 92 91 75 114 109 105 113 5 101 66 53 36 11 37 108 67 73 98 46 43 7 47 79 76 35 93 62 25 30 90</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\library\CPAL lib\src\stm32f4xx_i2c.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 106</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 82</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 112</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 11 61 102 16 110 103 19 39 74 100 41 20 120 121 85 54 49 92 91 75 114 109 105 113 5 101 66 53 36 37 108 67 73 98 46 43 7 47 79 76 35</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\library\CPAL lib\src\basic\cpal_usercallback.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 63</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 29</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 77</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 93 62 61 102 16 110 103 19 39 74 100 41 20 120 121 85 54 49 92 91 75 114 109 105 113 5 101 66 53 36 11 37 108 67 73 98 46 43 7 47 79 76 35 25 30</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\gyro.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 64</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 56</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 90 61 102 16 110 103 19 39 74 100 41 20 120 121 85 54 49 92 91 75 114 109 105 113 5 101 66 53 36 11 37 108 67 73 98 46 43 7 47 79 76 35 93 62 25 30</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\library\CPAL lib\src\stm32f4xx_gpio.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 104</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 118</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 28</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 36 61 102 16 110 103 19 39 74 100 41 20 120 121 85 54 49 92 91 75 114 109 105 113 5 101 66 53 11 37 108 67 73 98 46 43 7 47 79 76 35</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\library\CPAL lib\src\basic\cpal_i2c.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 88</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 9</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 45</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 93 62 61 102 16 110 103 19 39 74 100 41 20 120 121 85 54 49 92 91 75 114 109 105 113 5 101 66 53 36 11 37 108 67 73 98 46 43 7 47 79 76 35 25 30</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\library\CPAL lib\src\basic\cpal_hal.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 70</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 26</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 48</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 61 102 16 110 103 19 39 74 100 41 20 120 121 85 54 49 92 91 75 114 109 105 113 5 101 66 53 36 11 37 108 67 73 98 46 43 7 47 79 76 35 25 30</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\library\CPAL lib\src\basic\system_stm32f4xx.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 27</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 44</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 99</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 61 102 16 110 103 19 39 74 100 41 20 120 121 85 54 49 92 91 75 114 109 105 113 5 101 66 53 36 11 37 108 67 73 98 46 43 7 47 79 76 35</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\library\CPAL lib\src\stm32f4xx_tim.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 116</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 89</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 115</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 47 61 102 16 110 103 19 39 74 100 41 20 120 121 85 54 49 92 91 75 114 109 105 113 5 101 66 53 36 11 37 108 67 73 98 46 43 7 79 76 35</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\library\CPAL lib\src\stm32f4xx_dma.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 24</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 119</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 113 61 102 16 110 103 19 39 74 100 41 20 120 121 85 54 49 92 91 75 114 109 105 5 101 66 53 36 11 37 108 67 73 98 46 43 7 47 79 76 35</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\library\CPAL lib\src\basic\cpal_i2c_hal_stm32f4xx.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 57</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 15</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 86</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 62 61 102 16 110 103 19 39 74 100 41 20 120 121 85 54 49 92 91 75 114 109 105 113 5 101 66 53 36 11 37 108 67 73 98 46 43 7 47 79 76 35 25 30 93</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\library\CPAL lib\src\misc.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 71</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 40</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 55</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 35 61 102 16 110 103 19 39 74 100 41 20 120 121 85 54 49 92 91 75 114 109 105 113 5 101 66 53 36 11 37 108 67 73 98 46 43 7 47 79 76</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\library\CPAL lib\src\basic\startup_stm32f4xx.s</name>
+            <outputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 123</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Debug\Exe\mpu6050.out</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 84</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 65 70 88 57 63 64 111 71 123 87 24 104 106 107 116 27 124 78 94 18</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\BSP_Gyroscope.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 52</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 10</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 122 61 102 16 110 103 19 39 74 100 41 20 120 121 85 54 49 92 91 75 114 109 105 113 5 101 66 53 36 11 37 108 67 73 98 46 43 7 47 79 76 35 93 62 25 30 117 42 59 81 58</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\QM Works\QM Works\F2_source_files_29-09-2019\BSP_Gyroscope.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 10</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 51 61 102 16 110 103 19 39 74 100 41 20 120 121 85 54 49 92 91 75 114 109 105 113 5 101 66 53 36 11 37 108 67 73 98 46 43 7 47 79 76 35 95 21 96</file>
+                </tool>
+            </inputs>
+        </file>
+    </configuration>
+    <configuration>
+        <name>Release</name>
+        <outputs />
+        <forcedrebuild>
+            <name>[MULTI_TOOL]</name>
+            <tool>ILINK</tool>
+        </forcedrebuild>
+    </configuration>
+</project>
